@@ -1,0 +1,16 @@
+<view class="map_container">
+  <!--定义页面结构，可以使用地图组件也能使用其他组件 -->
+  <map id="myMap" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width:{{mapWidth}}; height:{{mapHeight}};"></map>
+</view>
+<view class="map_text origin_input">
+<image class="destination_images" src="../../images/origin.png" style="width: 34px; height: 32px;"></image>
+  <input placeholder="输入起始地点" value="{{address}}" />
+</view>
+<view class="destination_input">
+<image class="destination_images" src="../../images/destination.png" style="width: 30px; height: 32px;"></image>
+  <input placeholder="输入目的地点" value="{{address}}" />
+</view>
+<view >
+<button class="primary_btn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="primary"> 即时用车 </button>
+</view>
